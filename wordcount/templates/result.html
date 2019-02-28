@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+</nav>
+<div class="container">
+    <br>
+<h3 class="header center black-text" style="font-family: 'Noto Sans KR', sans-serif;">당신이 입력한 텍스트는 {{total}}개의 단어로 구성되어 있습니다.</h3></div>
+
+<a class="waves-effect waves-teal btn-flat" href="{%url 'home'%}">다시 하기</a>
+<br>
+<div class="container">
+<h5 class="header center black-text" style="font-family: 'Noto Sans KR', sans-serif;">입력한 텍스트</h2>
+    <div class="row">
+            <div class="container">
+              <div class="card white">
+                <div class="card-content black-text">
+                  <p>{{full}}</p>
+                </div>
+              </div>
+            </div>
+          </div> 
+</div>
+
+<h5 class="header center black-text" style="font-family: 'Noto Sans KR', sans-serif;">단어 카운트</h2>
+<div class="container">
+        <div class="row">
+                <div class="container">
+                  <div class="card white">
+                    <div class="card-content black-text">
+                      <p style="text-align:center;">{% for word, howmany in dictionary %}
+
+                        {{word}} : {{howmany}}
+                        <br>
+                        {% endfor %}</p>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+    </div>
+
+</div>
+
+{% endblock %}

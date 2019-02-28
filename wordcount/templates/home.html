@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<h1 class="header center black-text" style="font-family: 'Noto Sans KR', sans-serif;">여기서 단어를 세어보세요!</h1>
+<br>
+     <div class="row center">
+<form action="{%url 'result'%}" class="container" style="margin-top: 30px; height : 50%;">
+    <textarea cols="40" rows="50" name="fulltext" style="height : 50%;"></textarea>
+    <br>
+    <br>
+    <br>
+    <button class="btn waves-effect waves-light btn-large black" type="submit" name="action">Submit
+          </button>
+</form></div>
+
+{% endblock %}
